@@ -14,6 +14,7 @@ namespace LearnGraphQL.Movies.Schema
         {
             DependencyResolver = dependencyResolver;
             Query = moviesQuery;
+
             Mutation = moviesMutation;
             Subscription = moviesSubscription;
         }

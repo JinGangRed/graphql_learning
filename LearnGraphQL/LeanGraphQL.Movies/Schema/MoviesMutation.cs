@@ -14,7 +14,8 @@ namespace LearnGraphQL.Movies.Schema
         {
             Name = "Mutation";
             FieldAsync<MovieType>("createMovie",
-                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<MovieInputType>> { Name = "movie" }),
+                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<MovieInputType>> {
+                    Name = "movie" }),
                 resolve: async context =>
                 {
                     var movieInput = context.GetArgument<MovieInput>("movie");
